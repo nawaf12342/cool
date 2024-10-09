@@ -16,3 +16,10 @@ loginBtn.addEventListener('click', () => {
         errorMessage.classList.remove('hidden');
     }
 });
+
+// Mouse movement effect for smooth blur
+document.addEventListener('mousemove', (e) => {
+    const x = e.clientX / window.innerWidth * 20 - 10; // Control blur intensity
+    const y = e.clientY / window.innerHeight * 20 - 10; // Control blur intensity
+    document.body.style.filter = `blur(${Math.abs(x)}px)`;
+});
